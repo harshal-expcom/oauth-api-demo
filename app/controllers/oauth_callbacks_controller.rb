@@ -1,5 +1,7 @@
 class OauthCallbacksController < ApplicationController
   def login
-    debugger
+    logger = Logger.new(STDOUT)
+    logger.info "params >>>> #{params}"
+    logger.info "headers >>>> #{request.headers}"
   end
 end
